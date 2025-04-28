@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #F4F0EA;
+   color: #798252;
+   font-family: "Cabin", sans-serif;
+   font-weight: 400;
+}
+header {
+    padding: 2rem;
+    background-color: #331F19;
+    text-align: center;
+}
+p {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+h2 {
+    color: #331F19;
+    font-size: 1.2rem;
+}
+input[type="radio"] {
+    accent-color: #CDD595;
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;   
+}
+body {
+    background: black;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    
+}
