@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Circular+Std:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -93,4 +96,101 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+main {
+    margin-top: 29px;
+    margin-left: 10px;
+    margin-right: 20px;
+    gap: 12px;
+}
+.primeiro {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.imagem_1 {
+    background: #292929;
+    width: 176.5px;
+    height: 56px;
+    border-radius: 4px;
+    
+
+}
+.letra_liked {
+    display: flex;
+    justify-content: center;
+    margin-top: -42px;
+    margin-left: 60px;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 103px;
+    height: 16px;
+    
+
+}
+.imagem_2 {
+    background: #292929;
+    width: 250px;
+    height: 56px;
+    border-radius: 4px;
+    margin-right: -15px;
+    margin-left: 10px;
+
+    
+}
+
+.letra_all {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: -42px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 135px;
+    height: 16px;
+}
+
+.segundo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    
+}
+
+.imagem_3 {
+    background: #292929;
+    margin-right: 10px;
+    width: 165px;
+    height: 56px;
+    border-radius: 4px;
+}
+
+.letra_dil {
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: -50px;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 103px;
+    height: 32px;
+    size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+}
+
+.imagem_4 {
+    background: #292929;
+    width: 250px;
+    height: 56px;
+    margin-right: -15px;
+    border-radius: 4px;
+    
 }
