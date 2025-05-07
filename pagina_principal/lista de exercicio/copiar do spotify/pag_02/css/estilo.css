@@ -241,6 +241,21 @@ section {
     padding: 0px;
     margin-right: 8px;
 }
+.letra_hindi {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 103px;
+    height: 32px;
+    margin-left: 60px;
+    margin-top: -50px;
+    size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+}
 .imagem_6 {
     background-color: #292929;
     width: 176.5px;
@@ -249,4 +264,19 @@ section {
     border-radius: 4px;
     padding: 0px;
     margin-right: 50px;
+}
+.letra_mother {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 103px;
+    height: 32px;
+    margin-top: -55px;
+    margin-left: 70px;
+    size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
 }
