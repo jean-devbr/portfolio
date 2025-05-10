@@ -97,14 +97,14 @@ nav {
     justify-content: center;
     align-items: center;
 }
-section {
+.inicial {
     margin-top: 29px;
     margin-left: 16px;
     margin-right: 26px;
     margin-bottom: 8px;
     gap: 12px;
     width: 393px;
-    height: 264.4px;
+    height: 264.06px;
     gap: 8px;
 }
 .primeiro {
@@ -145,7 +145,8 @@ section {
     min-width: 140px;
     border-radius: 4px;
     padding: 0px;
-    margin-right: 50px;
+    margin-right: 30px;
+    
 
     
 }
@@ -154,16 +155,16 @@ section {
     color: #FFFFFF;
     display: flex;
     justify-content: center;
-    margin-left: 70px;
-    margin-top: -50px;
+    margin-left: 65px;
+    margin-top: -45px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     gap: 8px;
     width: 103px;
     height: 16px;
+    size: 12px;
     line-height: 16px;
     letter-spacing: 0px;
-    size: 12px;
 }
 
 .segundo {
@@ -206,7 +207,7 @@ section {
     min-width: 140px;
     border-radius: 4px;
     padding: 0px;
-    margin-right: 50px;
+    margin-right: 30px;
 
 }
 
@@ -219,8 +220,8 @@ section {
     gap: 8px;
     width: 103px;
     height: 32px;
-    margin-left: 70px;
-    margin-top: -50px;
+    margin-left: 65px;
+    margin-top: -45px;
     size: 12px;
     line-height: 16px;
     letter-spacing: 0;
@@ -263,9 +264,63 @@ section {
     min-width: 140px;
     border-radius: 4px;
     padding: 0px;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 .letra_mother {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 103px;
+    height: 32px;
+    margin-top: -55px;
+    margin-left: 65px;
+    size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+.quarto {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.imagem_7 {
+    background: #292929;
+    width: 176.5px;
+    height: 56px;
+    min-width: 140px;
+    border-radius: 4px;
+    padding: 0px;
+    margin-right: 8px;
+}
+.letra_lofi {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    gap: 8px;
+    width: 103px;
+    height: 32px;
+    margin-left: 45px;
+    margin-top: -40px;
+    size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+}
+.imagem_8 {
+    background: #292929;
+    width: 176.5px;
+    height: 56px;
+    min-width: 140px;
+    border-radius: 4px;
+    padding: 0px;
+    margin-right: 30px;
+}
+.letra_energy {
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -278,5 +333,5 @@ section {
     margin-left: 70px;
     size: 12px;
     line-height: 16px;
-    letter-spacing: 0;
+    letter-spacing: 0px;
 }
