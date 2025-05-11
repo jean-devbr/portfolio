@@ -13,48 +13,54 @@ body {
     background: black;
 }
 header {
+    
     display: flex;
-    justify-content: space-around
+    justify-content: center;
+}
+.data_hora {
+    width: 402px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    padding-bottom: 30px;
+    
 }
 .rede {
-    padding: 0;
-    margin-top: 21px;
-    margin-right: -100px;
-    margin-left: -50px;
-    gap: 10px;
-    width: -200px;
+    color: #FFFFFF;
 }
+
 .hora {
-    margin-top: 21px;
-    margin-left: -70px;
-    margin-right: 6px;
-    gap: 10px;
-    width: 44px;
-    height: 22px;
+    color: #FFFFFF;
     size: 17px;
     line-height: 22px;
     letter-spacing: 0px;
     color: #FFFFFF;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 700;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+    
 }
 nav {
+    padding-bottom: 30px;
     height: 32px;
-    width: 393px;
+    
     padding: 0;
-    margin-right: 40px;
-    margin-left: 10;
-    gap: 5px;
-    margin-top: 60px;
+    
+    gap: 8px;
+    
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+}
+.nav_principal {
+    gap: 8px;
+    width: 393px;
+    display: flex;
+    
+
 }
 .perfil {
-    margin-left: 20px;
+    
    
 }
 .all {
@@ -97,22 +103,58 @@ nav {
     justify-content: center;
     align-items: center;
 }
-.inicial {
-    margin-top: 29px;
-    margin-left: 16px;
-    margin-right: 26px;
-    margin-bottom: 8px;
-    gap: 12px;
-    width: 393px;
-    height: 264.06px;
-    gap: 8px;
-}
-.primeiro {
+main {
+    
     display: flex;
-    justify-content: space-between;
-    
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 393px;
+    height: 59vh;
     
 }
+
+.inicial {
+
+    display: flex;
+    width: 393px;
+    height: 265px;
+    
+}
+
+.grid_menu {
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+
+.grid_img {
+    background: #292929;
+    width: 176.5px;
+    height: 56px;
+    display: flex;
+    gap: 8px;
+    padding: 0 8px 0 0;
+    align-items: center;
+} 
+p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    
+    color: #FFFFFF;
+}
+/*
+.primeiro {
+   /* display: flex;
+    justify-content: space-between;
+}*/    
+    
+
+/*
 .imagem_1 {
     background: #292929;
     width: 176.5px;
@@ -168,12 +210,13 @@ nav {
 }
 
 .segundo {
-    display: flex;
+  /*  display: flex;
     justify-content: space-between;
     margin-top: 5px;
+}    */
     
-}
 
+/*
 .imagem_3 {
     background: #292929;
     width: 176.5px;
@@ -228,11 +271,11 @@ nav {
     
 }
 .terceiro {
-    display: flex;
+  /*  display: flex;
     justify-content: space-between;
     margin-top: 5px;
-
-}
+}*/
+/*
 .imagem_5 {
     background: #292929;
     width: 176.5px;
@@ -282,11 +325,12 @@ nav {
     letter-spacing: 0px;
 }
 .quarto {
-    display: flex;
+/*     display: flex;
     justify-content: space-between;
     margin-top: 5px;
-}
+}*/
 
+/*
 .imagem_7 {
     background: #292929;
     width: 176.5px;
@@ -335,3 +379,4 @@ nav {
     line-height: 16px;
     letter-spacing: 0px;
 }
+*/
