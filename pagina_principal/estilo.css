@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root /*Root: Definir uma variável */{
+     --font-sans: "Inter", sans-serif;
+     --text-preset-1: 24px;
+     --text-preset-2: 14px;
+}
+body {
+    background: #000000;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-optical-sizing: auto; /* é utilizada para controlar o ajuste automático do tamanho da fonte em relação à sua legibilidade e estética */
+
+    font-weight: 400; /*Ajusta o tamanho da fonte */
+
+    font-style: normal; /*Ajusta a fonte no estilo */
+    
+    font-size: var(--text-preset-2);
+    line-height: var(--text-preset-1); /* é utilizada para definir a altura da linha de um texto. Ela controla o espaço vertical entre as linhas de texto em um elemento, afetando a legibilidade e a estética do conteúdo. */
+}
+section {
+    background-color: #333333;
+    border-radius: 12px;
+    width: 50vh;
+    height: 85vh;
+    padding: 24px;
+}
+.elemento_pai {
+    color: white;
+}
+header {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+img {
+    height: 30%;
+    width: 30%;
+    margin-inline: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+main {
+    text-align: center; /* Coloca no centro */
+    margin-inline-start: 0; /* Ajusta a diração no começo para direita para esquerda ou esquerda para direita. Vai depende do idioma*/
+    margin-inline-end: 0; /* Ajusta a diração no final para direita para esquerda ou esquerda para direita. Vai depende do idioma*/
+}
