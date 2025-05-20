@@ -5,40 +5,44 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root /*Root: Definir uma variável */{
-     --font-sans: "Inter", sans-serif;
-     --text-preset-1: 24px;
-     --text-preset-2: 14px;
-     --green: hsl(75, 94%, 57%);
-     --link-radius: 8px;
-     --space-150: 12px;
-     --grey-800: hsl(0, 0%, 12%);
-     --grey-900: hsl(0, 0%, 8%);
-     --space-200: 16px;
-     --space-300: 24px;
+:root {
+    --font-sans: "Inter", sans-serif;
+    --text-preset-1: 24px;
+    --text-preset-2: 14px;
+    --green: hsl(75, 94%, 57%);
+    --link-radius: 8px;
+    --space-150: 12px;
+    --grey-800: hsl(0, 0%, 12%); /* Cor mais escura */
+    --grey-700: hsl(0, 0%, 20%); /* Cor intermediária */
+    --grey-900: hsl(0, 0%, 8%); /* Cor mais escura */
+    --space-200: 16px;
+    --space-300: 24px;
+    --button-bg-gray: hsl(0, 0%, 35%);
+    --button-bg-hover: hsl(220, 80%, 50%);
 }
+
 body {
-    background: var(--grey-900);
+    background: var(--grey-900); /* Cor mais escura */
     margin-top: 60px;
     display: flex;
     justify-content: center;
     font-family: var(--font-sans);
-    font-optical-sizing: auto; /* é utilizada para controlar o ajuste automático do tamanho da fonte em relação à sua legibilidade e estética */
-
-    font-weight: 400; /*Ajusta o tamanho da fonte */
-
-    font-style: normal; /*Ajusta a fonte no estilo */
-    
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-size: var(--text-preset-2);
-    line-height: var(--text-preset-1); /* é utilizada para definir a altura da linha de um texto. Ela controla o espaço vertical entre as linhas de texto em um elemento, afetando a legibilidade e a estética do conteúdo. */
+    line-height: var(--text-preset-1);
 }
+
 section {
-    background-color: var(--grey-800);
+    margin-top: 35px;
+    background-color: var(--grey-800); /* Cor intermediária */
     border-radius: 12px;
     width: 50vh;
-    height: 85vh;
     padding: 24px;
+    margin-inline: 20px;
 }
+
 .elemento_pai {
     color: white;
 }
@@ -70,26 +74,37 @@ nav {
     unicode-bidi: isolate;
 }
 
-ul {
+ul.lista {
     list-style: none;
+    padding-inline-start: 0;
+    margin-block-start: 24px;
     
+}
+ul.lista li {
+    margin-bottom: 12px;
 }
 li{
     display: list-item;
     unicode-bidi: isolate;
     text-align: -webkit-match-parent;
 }
-.button {
-    --link-text-color: var(--white);
+a.button {
     display: block;
-    background-color: #3B82F6;
+    background-color: var(--button-bg-gray);
     color: var(--link-text-color);
     text-decoration: none;
     width: 100%;
     border: 0;
     border-radius: var(--link-radius);
     padding: var(--space-150);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    user-select: none;
 }
-.lista {
-    margin-block-start: var(--space-300);
+a.button:hover,
+a.button:focus {
+    background-color: var(--button-bg-hover);
+    outline: none;
 }
