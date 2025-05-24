@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oficina - Sistema de Cadastros</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Oficina AutoPro</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <div class="container-nav">
-      <a href="" class="logo">Oficina</a>
-      <ul class="nav-links">
-        <li><a href="cadastro-cliente.html">Cadastro Cliente</a></li>
-        <li><a href="cadastro-veiculo.html">Cadastro Veículo</a></li>
-        <li><a href="cadastro-defeito.html">Defeito</a></li>
-        <li><a href="cadastro-servico.html">Serviço</a></li>
-      </ul>
-    </div>
-  </nav>
+  <aside class="sidebar">
+    <h2>Oficina AutoPro</h2>
+    <nav>
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="cadastro_cliente.html">Clientes</a>
+      <a href="cadastro_veiculo.html">Veículos</a>
+      <a href="cadastro_defeito.html">Defeitos</a>
+      <a href="servico_realizado.html">Serviços</a>
+    </nav>
+  </aside>
 
-  <main>
-    <h1>Bem-vindo à Oficina</h1>
-    <p>Selecione uma opção de cadastro para iniciar o processo.</p>
+  <div class="banner-motivacional">
+    <p>🔧 Aqui na Oficina AutoPro, transformamos desafios em soluções! Seu carro em boas mãos. 🚗💨</p>
+  </div>
+
+  <main class="content">
+    <h1>Bem-vindo à Oficina AutoPro</h1>
+    <p>Use o menu lateral para navegar entre as opções de cadastro e serviços.</p>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
