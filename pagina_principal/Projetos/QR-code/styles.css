@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background: #E0EEEE;
+    margin-top: 60px;
+}
+main {
+    background-color: red;
+    margin-top: 35px;
+    width: 50vh;
+    height: 80vh;
+    padding: 24px;
+    margin-inline: 20px;
+}
+.elemento_pai {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 220px;
+    margin-inline: auto;
+}
+p {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
