@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -5,56 +6,58 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Ride Management System (Uber-like)",
-    description: "Full REST API built with Spring Boot, Spring Security JWT, PostgreSQL, and driver-passenger matching.",
-    technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
-    demo: null,
-    github: "https://github.com/{{SEU_USUARIO}}/uber-clone-api",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop"
-  },
-  {
-    title: "E-commerce with Microservices",
-    description: "Microservices architecture with services for product, order, payment and user, plus an API Gateway.",
-    technologies: ["Spring Boot", "Spring Cloud", "RabbitMQ", "MySQL"],
-    demo: "https://ecommerce-demo.vercel.app",
-    github: "https://github.com/{{SEU_USUARIO}}/ecommerce-microservices",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop"
-  },
-  {
-    title: "Financial Management System",
-    description: "Complete platform for personal and business finance management with advanced reports and dashboards.",
-    technologies: ["Node.js", "Express", "MongoDB", "React"],
-    demo: "https://finance-app-demo.vercel.app",
-    github: "https://github.com/{{SEU_USUARIO}}/finance-management",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
-  },
-  {
-    title: "Multi-tenant Authentication API",
-    description: "Robust authentication system with multi-tenant support, JWT, OAuth2 and permission management.",
-    technologies: ["Java", "Spring Security", "Redis", "PostgreSQL"],
-    demo: null,
-    github: "https://github.com/{{SEU_USUARIO}}/auth-multitenant",
+    title: "Sistema de Login",
+    description: "Sistema de login desenvolvido usando HTML e CSS puro, sem necessidade de API.",
+    technologies: ["HTML", "CSS"],
+    demo: "https://jean-devbr.github.io/login/",
+    github: "https://github.com/jean-devbr/login",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop"
   },
   {
-    title: "IoT Monitoring System",
-    description: "Platform for collecting and analyzing IoT device data in real-time with automatic alerts.",
-    technologies: ["Node.js", "MQTT", "InfluxDB", "Grafana"],
-    demo: "https://iot-monitor-demo.vercel.app",
-    github: "https://github.com/{{SEU_USUARIO}}/iot-monitoring",
-    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=800&h=600&fit=crop"
+    title: "Clone do Spotify",
+    description: "Clone do aplicativo Spotify desenvolvido usando HTML e CSS puro.",
+    technologies: ["HTML", "CSS"],
+    demo: "https://jean-devbr.github.io/Copia_Spotify/",
+    github: "https://github.com/jean-devbr/Copia_Spotify",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop"
   },
   {
-    title: "Online Booking Platform",
-    description: "Complete booking system with calendar integration, notifications and online payments.",
-    technologies: ["Spring Boot", "Angular", "PostgreSQL", "Stripe"],
-    demo: "https://booking-platform-demo.vercel.app",
-    github: "https://github.com/{{SEU_USUARIO}}/booking-platform",
-    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=600&fit=crop"
+    title: "Desafio Java",
+    description: "Projeto de desafio desenvolvido em Java.",
+    technologies: ["Java"],
+    demo: null,
+    github: "https://github.com/jean-devbr/DesafioJava",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
   },
+  {
+    title: "Desafio Python",
+    description: "Projeto de desafio desenvolvido em Python.",
+    technologies: ["Python"],
+    demo: null,
+    github: "https://github.com/jean-devbr/desafio_python",
+    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop"
+  },
+  {
+    title: "Clone Plataforma Anime",
+    description: "Clone de uma plataforma de anime desenvolvido usando HTML e CSS.",
+    technologies: ["HTML", "CSS"],
+    demo: "https://jean-devbr.github.io/clonePlataformaAnime/",
+    github: "https://github.com/jean-devbr/clonePlataformaAnime",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
+  },
+  // Aguarde o usuário enviar os projetos reais para adicionar aqui
 ];
 
 const Projects = () => {
+  const [selectedTech, setSelectedTech] = useState("All");
+
+  const filterOptions = ["All", "HTML + CSS Puro", "Java", "Python"];
+  const filteredProjects = selectedTech === "All" 
+    ? projects 
+    : selectedTech === "HTML + CSS Puro" 
+      ? projects.filter(p => p.technologies.includes("HTML") && p.technologies.includes("CSS"))
+      : projects.filter(p => p.technologies.includes(selectedTech));
+
   return (
     <section id="projects" className="section-container bg-card/30">
       <div className="text-center mb-16 space-y-4">
@@ -69,8 +72,22 @@ const Projects = () => {
         </p>
       </div>
 
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-2 mb-8">
+        {filterOptions.map(option => (
+          <Button 
+            key={option} 
+            variant={selectedTech === option ? "default" : "outline"} 
+            onClick={() => setSelectedTech(option)}
+            className="mb-2"
+          >
+            {option}
+          </Button>
+        ))}
+      </div>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <Card 
             key={index}
             className="group bg-card border-border hover:border-primary/50 transition-all overflow-hidden hover-lift hover:shadow-[0_0_30px_hsl(var(--primary)/0.2)]"
