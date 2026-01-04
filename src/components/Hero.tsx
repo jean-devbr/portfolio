@@ -1,8 +1,11 @@
 import { Download, Github, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="section-container min-h-screen flex items-center justify-center">
       <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
@@ -10,18 +13,18 @@ const Hero = () => {
         <div className="space-y-6 animate-fade-in-up">
           <div className="space-y-2">
             <p className="text-primary text-sm md:text-base font-semibold tracking-wide uppercase">
-              Full-Stack Developer
+              {t('fullStackDeveloper')}
             </p>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <span className="gradient-text">{"Jean Costa"}</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">
-              {"Full-Stack Developer"}
+              {t('fullStackDeveloper')}
             </p>
           </div>
           
           <p className="text-base md:text-lg text-muted-foreground max-w-xl">
-            {"Full-Stack developer focused on modern web applications, robust APIs, and best practices."}
+            {t('heroDescription')}
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
@@ -32,7 +35,7 @@ const Hero = () => {
             >
               <a href="/CurriculoJean.docx" download>
                 <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                {t('downloadResume')}
               </a>
             </Button>
             
@@ -43,7 +46,7 @@ const Hero = () => {
               asChild
             >
               <a href="#contact">
-                Contact Me
+                {t('contactMe')}
               </a>
             </Button>
           </div>

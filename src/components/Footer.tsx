@@ -1,6 +1,9 @@
 import { Github, Linkedin, Instagram, Youtube, Heart } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -13,32 +16,32 @@ const Footer = () => {
               {"Jean Costa"}
             </h3>
             <p className="text-muted-foreground">
-              Full-Stack Developer specialized in building robust and scalable solutions.
+              {t('footerDescription')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Quick Links</h4>
+            <h4 className="font-semibold text-lg">{t('quickLinks')}</h4>
             <nav className="flex flex-col space-y-2">
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-                About
+                {t('about')}
               </a>
               <a href="#technologies" className="text-muted-foreground hover:text-primary transition-colors">
-                Technologies
+                {t('technologies')}
               </a>
               <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">
-                Projects
+                {t('projects')}
               </a>
               <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
+                {t('contact')}
               </a>
             </nav>
           </div>
 
           {/* Social */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-lg">Socials</h4>
+            <h4 className="font-semibold text-lg">{t('socials')}</h4>
             <div className="flex gap-4">
               <a 
                 href="https://www.linkedin.com/in/jean-costa-0040962b8/" 
@@ -78,7 +81,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border text-center">
             <p className="text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} {"Jean Costa"} • Made with <Heart className="h-4 w-4 text-primary fill-primary" /> and lots of code
+            © {currentYear} {"Jean Costa"} • {t('madeWith')}
           </p>
         </div>
       </div>

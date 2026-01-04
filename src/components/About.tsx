@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="section-container bg-card/30">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -18,27 +22,27 @@ const About = () => {
         <div className="order-1 lg:order-2 space-y-6">
           <div>
             <p className="text-primary text-sm font-semibold tracking-wide uppercase mb-2">
-              Get to know
+              {t('getToKnow')}
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text">
-              About Me
+              {t('aboutMe')}
             </h2>
           </div>
           
           <div className="prose prose-invert prose-lg max-w-none">
             <p className="text-muted-foreground leading-relaxed">
-              {"Hello! My name is Jean, I'm 22 years old and I'm from Rio de Janeiro. I'm a curious person, constantly learning, and I like to challenge myself to grow personally and professionally. I'm always looking for new opportunities and experiences that help me evolve and contribute to projects in a meaningful way."}
+              {t('aboutDescription')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-6 pt-4">
             <div className="space-y-2">
               <p className="text-4xl font-bold gradient-text">1+</p>
-              <p className="text-muted-foreground">Years of Experience</p>
+              <p className="text-muted-foreground">{t('yearsOfExperience')}</p>
             </div>
             <div className="space-y-2">
               <p className="text-4xl font-bold gradient-text">30+</p>
-              <p className="text-muted-foreground">Completed Projects</p>
+              <p className="text-muted-foreground">{t('completedProjects')}</p>
             </div>
           </div>
         </div>

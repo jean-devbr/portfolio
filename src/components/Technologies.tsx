@@ -1,5 +1,6 @@
 import { Code2, Database, Server, Cloud, GitBranch, Container, Code, Smartphone, Terminal } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useTranslation } from 'react-i18next';
 
 const technologies = [
   { name: "Java & Spring Boot", icon: Code2, description: "Robust and scalable backend" },
@@ -13,17 +14,19 @@ const technologies = [
 ];
 
 const Technologies = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="technologies" className="section-container">
       <div className="text-center mb-16 space-y-4">
         <p className="text-primary text-sm font-semibold tracking-wide uppercase">
-          Tech Stack
+          {t('techStack')}
         </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text">
-          Technologies & Tools
+          {t('technologiesTools')}
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Strong experience with core technologies used in the industry
+          {t('techDescription')}
         </p>
       </div>
 

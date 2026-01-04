@@ -5,10 +5,12 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <LanguageSwitcher />
       <Hero />
       <About />
       <Technologies />

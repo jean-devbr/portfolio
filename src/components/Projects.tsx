@@ -3,58 +3,69 @@ import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
-const projects = [
-  {
-    title: "Sistema de Login",
-    description: "Sistema de login desenvolvido usando HTML e CSS puro, sem necessidade de API.",
-    technologies: ["HTML", "CSS"],
-    demo: "https://jean-devbr.github.io/login/",
-    github: "https://github.com/jean-devbr/login",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop"
-  },
-  {
-    title: "Clone do Spotify",
-    description: "Clone do aplicativo Spotify desenvolvido usando HTML e CSS puro.",
-    technologies: ["HTML", "CSS"],
-    demo: "https://jean-devbr.github.io/Copia_Spotify/",
-    github: "https://github.com/jean-devbr/Copia_Spotify",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop"
-  },
-  {
-    title: "Desafio Java",
-    description: "Projeto de desafio desenvolvido em Java.",
-    technologies: ["Java"],
-    demo: null,
-    github: "https://github.com/jean-devbr/DesafioJava",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
-  },
-  {
-    title: "Desafio Python",
-    description: "Projeto de desafio desenvolvido em Python.",
-    technologies: ["Python"],
-    demo: null,
-    github: "https://github.com/jean-devbr/desafio_python",
-    image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop"
-  },
-  {
-    title: "Clone Plataforma Anime",
-    description: "Clone de uma plataforma de anime desenvolvido usando HTML e CSS.",
-    technologies: ["HTML", "CSS"],
-    demo: "https://jean-devbr.github.io/clonePlataformaAnime/",
-    github: "https://github.com/jean-devbr/clonePlataformaAnime",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop"
-  },
-  // Aguarde o usuário enviar os projetos reais para adicionar aqui
-];
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
-  const [selectedTech, setSelectedTech] = useState("All");
+  const { t } = useTranslation();
 
-  const filterOptions = ["All", "HTML + CSS Puro", "Java", "Python"];
-  const filteredProjects = selectedTech === "All" 
+  const projects = [
+    {
+      title: t('loginSystem'),
+      description: t('loginSystemDesc'),
+      technologies: ["HTML", "CSS"],
+      demo: "https://jean-devbr.github.io/login/",
+      github: "https://github.com/jean-devbr/login",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('spotifyClone'),
+      description: t('spotifyCloneDesc'),
+      technologies: ["HTML", "CSS"],
+      demo: "https://jean-devbr.github.io/Copia_Spotify/",
+      github: "https://github.com/jean-devbr/Copia_Spotify",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('javaChallenge'),
+      description: t('javaChallengeDesc'),
+      technologies: ["Java"],
+      demo: null,
+      github: "https://github.com/jean-devbr/DesafioJava",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('pythonChallenge'),
+      description: t('pythonChallengeDesc'),
+      technologies: ["Python"],
+      demo: null,
+      github: "https://github.com/jean-devbr/desafio_python",
+      image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('jordanStore'),
+      description: t('jordanStoreDesc'),
+      technologies: ["HTML", "CSS"],
+      demo: "https://jean-devbr.github.io/Loja-Jordan/",
+      github: "https://github.com/jean-devbr/Loja-Jordan",
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('blog'),
+      description: t('blogDesc'),
+      technologies: ["HTML", "CSS", "JavaScript"],
+      demo: "https://jean-devbr.github.io/blog/",
+      github: "https://github.com/jean-devbr/blog",
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
+    },
+    // Wait for the user to send the real projects to add here
+  ];
+
+  const [selectedTech, setSelectedTech] = useState(t('all'));
+
+  const filterOptions = [t('all'), t('pureHtmlCss'), "Java", "Python", "JavaScript"];
+  const filteredProjects = selectedTech === t('all') 
     ? projects 
-    : selectedTech === "HTML + CSS Puro" 
+    : selectedTech === t('pureHtmlCss') 
       ? projects.filter(p => p.technologies.includes("HTML") && p.technologies.includes("CSS"))
       : projects.filter(p => p.technologies.includes(selectedTech));
 
@@ -130,7 +141,7 @@ const Projects = () => {
                 >
                   <a href={project.demo} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Demo
+                    {t('viewDemo')}
                   </a>
                 </Button>
               )}
@@ -142,7 +153,7 @@ const Projects = () => {
               >
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" />
-                  Code
+                  {t('viewCode')}
                 </a>
               </Button>
             </CardFooter>
