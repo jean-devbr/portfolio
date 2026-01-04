@@ -1,5 +1,6 @@
 import { Download, Github, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -84,15 +85,27 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Profile Image */}
+        {/* Computer Emoji and Code Text Animation */}
         <div className="flex justify-center lg:justify-end">
-          <div className="relative animate-float">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl"></div>
-            <img 
-              src="/imagem/jean.png" 
-              alt="Jean Costa"
-              className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-primary/30 shadow-2xl"
-            />
+          <div className="flex flex-col items-center space-y-6">
+            {/* Pulsing Computer Emoji */}
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="text-8xl"
+            >
+              💻
+            </motion.div>
+            
+            {/* Typing Code Text */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="text-2xl font-mono font-bold text-primary"
+            >
+              &lt;/&gt; Code
+            </motion.div>
           </div>
         </div>
       </div>

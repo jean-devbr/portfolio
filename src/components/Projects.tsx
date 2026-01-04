@@ -61,9 +61,6 @@ const Projects = () => {
   return (
     <section id="projects" className="section-container bg-card/30">
       <div className="text-center mb-16 space-y-4">
-        <p className="text-primary text-sm font-semibold tracking-wide uppercase">
-          Portfolio
-        </p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text">
           Featured Projects
         </h2>

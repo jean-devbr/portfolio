@@ -22,3 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# OS generated files
+Thumbs.db
+*.tmp
+*.temp
+
+# Build outputs
+build/
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Package manager files
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Temporary files
+*.swp
+*.swo
+*~
