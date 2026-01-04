@@ -1,13 +1,15 @@
-import { Code2, Database, Server, Cloud, GitBranch, Container } from "lucide-react";
+import { Code2, Database, Server, Cloud, GitBranch, Container, Code, Smartphone, Terminal } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const technologies = [
   { name: "Java & Spring Boot", icon: Code2, description: "Robust and scalable backend" },
-  { name: "Node.js & Express", icon: Server, description: "RESTful APIs and microservices" },
   { name: "PostgreSQL & MySQL", icon: Database, description: "Data modeling and optimization" },
   { name: "Docker & Kubernetes", icon: Container, description: "Containerization and orchestration" },
   { name: "AWS & Azure", icon: Cloud, description: "Cloud computing and DevOps" },
   { name: "Git & CI/CD", icon: GitBranch, description: "Version control and automation" },
+  { name: "Python", icon: Code, description: "Scripting and data analysis" },
+  { name: "Flutter & Dart", icon: Smartphone, description: "Cross-platform mobile and web development" },
+  { name: "Linux", icon: Terminal, description: "System administration and development" },
 ];
 
 const Technologies = () => {
