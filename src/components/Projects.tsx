@@ -57,16 +57,42 @@ const Projects = () => {
       github: "https://github.com/jean-devbr/blog",
       image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=600&fit=crop"
     },
+    {
+      title: t('flutterLoginApp'),
+      description: t('flutterLoginAppDesc'),
+      technologies: ["Flutter", "Dart", "API"],
+      demo: null,
+      github: "https://github.com/jean-devbr/Login_flutter",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('usuariosApi'),
+      description: t('usuariosApiDesc'),
+      technologies: ["Java", "Spring Boot", "API"],
+      demo: null,
+      github: "https://github.com/jean-devbr/usuarios-api",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop"
+    },
+    {
+      title: t('rnClientProductCrud'),
+      description: t('rnClientProductCrudDesc'),
+      technologies: ["React Native", "Expo", "TypeScript", "SQLite", "API"],
+      demo: null,
+      github: "https://github.com/jean-devbr/rn-client-product-crud",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop"
+    },
     // Wait for the user to send the real projects to add here
   ];
 
   const [selectedTech, setSelectedTech] = useState(t('all'));
 
-  const filterOptions = [t('all'), t('pureHtmlCss'), "Java", "Python", "JavaScript"];
+  const filterOptions = [t('all'), t('pureHtmlCss'), t('apiIntegration'), "Java", "Python", "JavaScript"];
   const filteredProjects = selectedTech === t('all') 
     ? projects 
     : selectedTech === t('pureHtmlCss') 
       ? projects.filter(p => p.technologies.includes("HTML") && p.technologies.includes("CSS"))
+      : selectedTech === t('apiIntegration')
+        ? projects.filter(p => p.technologies.includes("API"))
       : projects.filter(p => p.technologies.includes(selectedTech));
 
   return (

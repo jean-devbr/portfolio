@@ -45,6 +45,7 @@ const resources = {
       "projects": "Projects",
       "featuredProjectsTitle": "Featured Projects",
       "featuredProjectsDescription": "Some of the projects I have worked on throughout my career",
+      "apiIntegration": "API Integration",
       "all": "All",
       "pureHtmlCss": "Pure HTML + CSS",
       "viewDemo": "View Demo",
@@ -63,6 +64,12 @@ const resources = {
       "jordanStoreDesc": "Online Jordan sneakers store developed with HTML and CSS.",
       "blog": "Blog",
       "blogDesc": "Professional blog developed with HTML, CSS and JavaScript.",
+      "flutterLoginApp": "Flutter Login App",
+      "flutterLoginAppDesc": "Flutter app with user login and registration, integrated with a backend API for authentication.",
+      "usuariosApi": "Users API",
+      "usuariosApiDesc": "REST API for user registration and management built with Spring Boot.",
+      "rnClientProductCrud": "RN Client & Product CRUD",
+      "rnClientProductCrudDesc": "React Native (Expo) app for managing clients and their products with local SQLite persistence.",
 
       // Contact
       "letsTalk": "Let's Talk",
@@ -131,6 +138,7 @@ const resources = {
       "projects": "Projetos",
       "featuredProjectsTitle": "Projetos em Destaque",
       "featuredProjectsDescription": "Alguns dos projetos em que trabalhei ao longo da minha carreira",
+      "apiIntegration": "Integração com API",
       "all": "Todos",
       "pureHtmlCss": "HTML + CSS Puro",
       "viewDemo": "Ver Demo",
@@ -149,6 +157,12 @@ const resources = {
       "jordanStoreDesc": "Loja online de tênis Jordan desenvolvida com HTML e CSS.",
       "blog": "Blog",
       "blogDesc": "Blog profissional desenvolvido com HTML, CSS e JavaScript.",
+      "flutterLoginApp": "App de Login Flutter",
+      "flutterLoginAppDesc": "App Flutter com login e registro de usuário, integrado a uma API backend para autenticação.",
+      "usuariosApi": "Usuários API",
+      "usuariosApiDesc": "API REST para cadastro e gerenciamento de usuários, desenvolvida com Spring Boot.",
+      "rnClientProductCrud": "CRUD de Clientes e Produtos (RN)",
+      "rnClientProductCrudDesc": "App React Native (Expo) para cadastro de clientes e produtos com persistência local em SQLite.",
 
       // Contact
       "letsTalk": "Vamos Conversar",
