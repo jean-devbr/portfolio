@@ -67,8 +67,8 @@ const Contact = () => {
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-semibold">Brazil - Rio de Janeiro</p>
+                    <p className="text-sm text-muted-foreground">{t('location')}</p>
+                    <p className="font-semibold">{t('locationValue')}</p>
                   </div>
                 </div>
               </Card>

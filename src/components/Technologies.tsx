@@ -2,19 +2,18 @@ import { Code2, Database, Server, Cloud, GitBranch, Container, Code, Smartphone,
 import { Card } from "@/components/ui/card";
 import { useTranslation } from 'react-i18next';
 
-const technologies = [
-  { name: "Java & Spring Boot", icon: Code2, description: "Robust and scalable backend" },
-  { name: "PostgreSQL & MySQL", icon: Database, description: "Data modeling and optimization" },
-  { name: "Docker & Kubernetes", icon: Container, description: "Containerization and orchestration" },
-  { name: "AWS & Azure", icon: Cloud, description: "Cloud computing and DevOps" },
-  { name: "Git & CI/CD", icon: GitBranch, description: "Version control and automation" },
-  { name: "Python", icon: Code, description: "Scripting and data analysis" },
-  { name: "Flutter & Dart", icon: Smartphone, description: "Cross-platform mobile and web development" },
-  { name: "Linux", icon: Terminal, description: "System administration and development" },
-];
-
 const Technologies = () => {
   const { t } = useTranslation();
+  const technologies = [
+    { name: t('techJavaSpring'), icon: Code2, description: t('techJavaSpringDesc') },
+    { name: t('techPostgresMysql'), icon: Database, description: t('techPostgresMysqlDesc') },
+    { name: t('techDockerK8s'), icon: Container, description: t('techDockerK8sDesc') },
+    { name: t('techAwsAzure'), icon: Cloud, description: t('techAwsAzureDesc') },
+    { name: t('techGitCicd'), icon: GitBranch, description: t('techGitCicdDesc') },
+    { name: t('techPython'), icon: Code, description: t('techPythonDesc') },
+    { name: t('techFlutterDart'), icon: Smartphone, description: t('techFlutterDartDesc') },
+    { name: t('techLinux'), icon: Terminal, description: t('techLinuxDesc') },
+  ];
 
   return (
     <section id="technologies" className="section-container">
