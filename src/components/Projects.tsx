@@ -61,7 +61,7 @@ const Projects = () => {
       title: t('flutterLoginApp'),
       description: t('flutterLoginAppDesc'),
       technologies: ["Flutter", "Dart", "API"],
-      demo: null,
+      demo: "https://login-flutter-ebon.vercel.app/",
       github: "https://github.com/jean-devbr/Login_flutter",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop"
     },
