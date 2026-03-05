@@ -1,4 +1,4 @@
-import { Download, Github, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Github, Linkedin, Instagram, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
@@ -28,17 +28,6 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
-              asChild
-            >
-              <a href="/CurriculoJean.docx" download>
-                <Download className="mr-2 h-5 w-5" />
-                {t('downloadResume')}
-              </a>
-            </Button>
-            
             <Button 
               size="lg" 
               variant="outline"
