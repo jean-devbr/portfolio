@@ -11,7 +11,7 @@ const About = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl blur-2xl"></div>
             <img 
-              src="/imagem/jean.png" 
+              src="/imagem/Foto_profissional.jpeg" 
               alt="Jean Costa"
               className="relative w-full max-w-md rounded-2xl object-cover border-2 border-primary/20 shadow-xl"
             />
